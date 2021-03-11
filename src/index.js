@@ -1,3 +1,3 @@
-import { bioInfo } from "content";
+import { component } from "./content.js";
 
-bioInfo();
+document.onload = component();
