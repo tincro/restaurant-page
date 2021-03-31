@@ -1,5 +1,10 @@
+import { nav } from "./nav.js";
+
 var content = function(){
     var container = document.getElementById('content');
+
+    var info = document.createElement('div');
+    info.id = 'info-container';
     
     var headline = document.createElement('h1');
     headline.innerText = "Wilson's Diner";
@@ -22,6 +27,7 @@ var content = function(){
     
     var textContainer = document.createElement('div')
     textContainer.id = 'store-history';
+    textContainer.className = 'text-container';
 
     descArr.forEach(p => {
         var desc = document.createElement('p');
@@ -29,9 +35,11 @@ var content = function(){
         textContainer.appendChild(desc);
     });
 
+    info.appendChild(headline);
+    info.appendChild(textContainer);
     container.appendChild(image);
-    container.appendChild(headline);
-    container.appendChild(textContainer);
+    container.appendChild(info);
+    container.appendChild(nav());
 
     return container;
 }

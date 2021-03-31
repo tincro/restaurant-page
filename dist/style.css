@@ -6,18 +6,28 @@
 
 body {
     font-family: Arial, Helvetica, sans-serif;
+    color: #31393c;
 }
 
 a {
     text-decoration: none;
-    color: #000;
-    background-color: #999;
-    padding: 12px;
+    color: #2176ff;
 }
 
-a:target {
-    color: white;
-    background-color: blue;
+nav a {
+    text-decoration: none;
+    color: #fff;
+    background-color: #fff;
+    padding: 12px;
+    border: 1px solid #2176ff;
+}
+
+nav a:target {
+    color: #f6bd60;
+    background-color: #2176ff;
+}
+nav a:visited {
+    color: #f6bd60;
 }
 
 h1 {
@@ -34,14 +44,13 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 img {
-    width: 100%;
+    max-width: 100%;
 }
 
 p {
     font-size: 16px;
     width: 100%;
-    padding: 7px 12px;
-    margin: 0 12px;
+    padding: 5px 0;  
 }
 
 ul {
@@ -49,13 +58,84 @@ ul {
 }
 
 li {
+    padding: 4px;
+    display: flex;
+    justify-content: space-between;
+}
+
+nav li {
     display: inline-block;
     padding: 5px;
     margin: 3px;
 }
 
-#nav-content {
-
-    margin: 20px 12px;
+nav {
+    padding: 5px;
 }
 
+#content {
+    display: flex;
+    flex-flow: row wrap;
+}
+
+
+#info-container {
+    margin-bottom: 10px;
+    width: 100%;
+}
+
+.text-container {
+    margin: 12px;
+    padding: 12px;
+}
+
+#nav-content {
+    padding: 20px;
+    width: 100%;
+}
+
+.nav-tab {
+    padding: 20px;
+}
+
+#store-img {
+    flex-basis  : 100%;
+}
+
+#food-group-container {
+    background-color: #f1e2c9;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+
+}
+
+.food-title {
+    text-align: center;
+}
+
+.food-group {
+    width: 300px;
+    padding: 20px;
+    margin: 20px;
+}
+
+.food-group:nth-child(3n+0), .food-group:last-child {
+    border:none;
+}
+
+#contact-group-container {
+    width: 33%;
+}
+
+.contact-title {
+    margin: 0;
+    padding: 0;
+    font-size: 1em;
+
+}
+    
+.detail-item {
+    padding: 0;
+
+}

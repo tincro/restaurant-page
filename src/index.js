@@ -2,6 +2,7 @@ import { content } from "./content.js";
 import { contact } from "./contact.js";
 import { menu } from "./menu.js";
 
+
 document.onload = content();
 
 function onTabChange(tab){
