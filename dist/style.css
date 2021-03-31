@@ -80,6 +80,7 @@ nav {
 
 
 #info-container {
+    margin-left: 30px;
     margin-bottom: 10px;
     width: 100%;
 }
@@ -90,7 +91,7 @@ nav {
 }
 
 #nav-content {
-    padding: 20px;
+    padding: 30px;
     width: 100%;
 }
 
@@ -125,7 +126,15 @@ nav {
 }
 
 #contact-group-container {
-    width: 33%;
+    width: 100%;
+    padding-left: 30px;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-start;
+}
+
+.contact-container {
+    width: 30%;
 }
 
 .contact-title {
@@ -138,4 +147,17 @@ nav {
 .detail-item {
     padding: 0;
 
+}
+
+.form-input, .form-textarea, .form-button {
+    font-size: 16px;
+    display: block;
+    width: 100%;
+    padding: 16px;
+    margin: 10px 0;
+
+}
+
+#form-submit {
+    width: 50%; 
 }

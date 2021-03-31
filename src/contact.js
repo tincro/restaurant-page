@@ -22,6 +22,11 @@ var contact = function() {
     var details = Object.entries(contact);
 
     var detailList = document.createElement('ul');
+    var listContainer = document.createElement('div');
+    listContainer.id = 'list-container';
+    listContainer.className = 'contact-container';
+
+    listContainer.appendChild(detailList);
 
     for (const [key, value] of details) {
         let detailItem = document.createElement('li');
@@ -56,10 +61,16 @@ var contact = function() {
 
         detailList.appendChild(detailItem);
     }
-    contactGroup.appendChild(detailList);
+    contactGroup.appendChild(listContainer);
 
     // Form
     var form = document.createElement('form');
+    var formContainer = document.createElement('div');
+    formContainer.id = 'form-container';
+    formContainer.className = 'contact-container';
+
+    formContainer.appendChild(form);
+
     var formElements = {
         "First Name": {
             tag: "input",
@@ -79,10 +90,11 @@ var contact = function() {
             name: "message"
         },
         "Submit": {
-            tag: "input",
+            tag: "button",
             type: "submit",
             id: "form-submit",
-            name: "form-submit"
+            name: "form-submit",
+            value: "Submit"
         }
         
     }
@@ -98,19 +110,14 @@ var contact = function() {
         if(attrs["type"]){
             line.type = attrs["type"];
         }
+        if(attrs["value"]) {
+            line.innerText = attrs["value"]
+        }
 
         form.appendChild(line);
     }
 
-    /*
-    <form>
-        <input placeholder="First Name"></input>
-        <iput placeholder="Last Name"></iput>
-        <input placeholder="Leave us a message!"></input>
-    </form>
-    */
-
-    contactGroup.appendChild(form);
+    contactGroup.appendChild(formContainer);
     contactData.appendChild(contactGroup);
 
     return contactData;
