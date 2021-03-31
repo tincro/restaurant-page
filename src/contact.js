@@ -60,13 +60,57 @@ var contact = function() {
 
     // Form
     var form = document.createElement('form');
-    
+    var formElements = {
+        "First Name": {
+            tag: "input",
+            type: "text",
+            id: "fname",
+            name: "fname"
+        },
+        "Last Name": {
+            tag: "input",
+            type: "text",
+            id: "lname",
+            name: "lname"
+        },
+        "Message": {
+            tag: "textarea",
+            id: "message",
+            name: "message"
+        },
+        "Submit": {
+            tag: "input",
+            type: "submit",
+            id: "form-submit",
+            name: "form-submit"
+        }
+        
+    }
+
+    var inputs = Object.entries(formElements);
+
+    for (const [input, attrs] of inputs) {
+        let line = document.createElement(attrs["tag"]);
+        line.id = attrs["id"];
+        line.className = `form-${attrs["tag"]}`;
+        line.name = attrs["name"];
+        line.placeholder = input;
+        if(attrs["type"]){
+            line.type = attrs["type"];
+        }
+
+        form.appendChild(line);
+    }
+
+    /*
     <form>
         <input placeholder="First Name"></input>
         <iput placeholder="Last Name"></iput>
         <input placeholder="Leave us a message!"></input>
     </form>
+    */
 
+    contactGroup.appendChild(form);
     contactData.appendChild(contactGroup);
 
     return contactData;
