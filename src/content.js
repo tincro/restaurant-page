@@ -13,6 +13,7 @@ var content = function(){
     var image = document.createElement('img');
     image.src = '../img/Wilsons_diner.jpg'
     image.id = 'store-img'
+    image.alt = headline.innerText;
     
     var descArr = [
         "This local family owned restaurant is worth your time visiting.\
@@ -28,6 +29,13 @@ var content = function(){
     var textContainer = document.createElement('div')
     textContainer.id = 'store-history';
     textContainer.className = 'text-container';
+
+    var aboutUs = document.createElement('h2');
+    aboutUs.id = 'about-title';
+    aboutUs.className = 'about-title';
+    aboutUs.innerText = 'About Us';
+
+    textContainer.appendChild(aboutUs);
     
     descArr.forEach(p => {
         var desc = document.createElement('p');
