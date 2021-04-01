@@ -45,6 +45,7 @@ h1, h2, h3, h4, h5, h6 {
 
 img {
     max-width: 100%;
+    height: auto;
 }
 
 p {
@@ -63,6 +64,11 @@ li {
     justify-content: space-between;
 }
 
+nav ul {
+    display: flex;
+    justify-content: flex-end;
+}
+
 nav li {
     display: inline-block;
     padding: 5px;
@@ -70,6 +76,7 @@ nav li {
 }
 
 nav {
+    background-color: #f1e2c9;
     padding: 5px;
 }
 
@@ -86,8 +93,10 @@ nav {
 }
 
 .text-container {
-    margin: 12px;
+    margin: 12px 30px;
     padding: 12px;
+    width: 80%;
+    border-top: 1px solid #31393c;
 }
 
 #nav-content {
@@ -100,11 +109,13 @@ nav {
 }
 
 #store-img {
-    flex-basis  : 100%;
+    /* flex-basis  : 100%; */
+    width: 100%;
+    height: auto;
 }
 
 #food-group-container {
-    background-color: #f1e2c9;
+    background-color: rgba(33, 118, 255, .25);
     display: flex;
     flex-flow: row wrap;
     justify-content: space-around;
@@ -134,7 +145,8 @@ nav {
 }
 
 .contact-container {
-    width: 30%;
+    padding: 5px;
+    margin-right: 25px;
 }
 
 .contact-title {
@@ -149,6 +161,10 @@ nav {
 
 }
 
+form {
+    width: 400px;
+}
+
 .form-input, .form-textarea, .form-button {
     font-size: 16px;
     display: block;
@@ -160,4 +176,11 @@ nav {
 
 #form-submit {
     width: 50%; 
+}
+
+@media (max-width: 450px){
+    
+    .contact-container {
+        width: 100%;
+    }
 }
